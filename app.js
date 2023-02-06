@@ -123,6 +123,9 @@ async function deleteUser(id) {
     method: "DELETE",
   });
   if (response.ok) {
+    updateUsersGrid();
+    // if success, update the users grid
+    scrollToTop();
     // To do: make sure to update the users grid in order to display the new user
   }
 }
